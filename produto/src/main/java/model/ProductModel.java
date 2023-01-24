@@ -1,10 +1,20 @@
 package model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "Products")
 public class ProductModel {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    @Column(name = "code")
     private int code;
+    @Column(name = "name")
     private String name;
+    @Column(name = "value")
     private double value;
 
+    //Get e setters
     public int getCode() {
         return this.code;
     }

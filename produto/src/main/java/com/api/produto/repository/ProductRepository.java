@@ -1,6 +1,6 @@
-package repository;
+package com.api.produto.repository;
 
-import model.ProductModel;
+import com.api.produto.model.ProductModel;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

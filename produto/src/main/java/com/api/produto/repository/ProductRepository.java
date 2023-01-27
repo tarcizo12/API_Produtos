@@ -16,5 +16,5 @@ public interface ProductRepository extends CrudRepository <ProductModel, Integer
         void delete(ProductModel product);
 
         //Cadastrar ou alterar produto
-        <ProdMod extends ProductModel> ProdMod  save(ProductModel product);
+        <ProdMod extends ProductModel> ProdMod save(ProdMod product);
 }

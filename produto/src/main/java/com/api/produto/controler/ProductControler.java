@@ -17,7 +17,12 @@ public class ProductControler {
     //Listar produtos
     @RequestMapping(value = "/produtos", method = RequestMethod.GET)
     public @ResponseBody List<ProductModel> listAll (){
-        return this.actions.findAll();
+        ResponseModel response = new ResponseModel();
+        try{
+            return this.actions.findAll();
+        }catch(Error error){
+            return null;
+        }
     }
 
     @RequestMapping(value = "/produtos", method = RequestMethod.POST)
